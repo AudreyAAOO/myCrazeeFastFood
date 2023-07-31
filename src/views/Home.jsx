@@ -1,25 +1,26 @@
 // import { useState } from "react";
 
-
 // import des composants
 import Form from "../components/Form";
-
+import Logo from "../components/Logo";
+import { theme } from "../theme";
 import OrderPage from "./OrderPage";
 
 const Home = () => {
+	//! state
 
-    //! state
+	//! comportements
 
+	//! render
+	return (
+		<>
+			<HomePageStyled>
+				<Logo />
+				<Form />
+				<OrderPage />
+			</HomePageStyled>
+		</>
+	);
+};
 
-    //! comportements
- 
-
-    //! render
-    return (<>
-        <Form />
-        <OrderPage />
-
-    </>)
-}
-
-export default Home
+export default Home;
