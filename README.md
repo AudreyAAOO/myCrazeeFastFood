@@ -1,8 +1,29 @@
-# Audrey React + Vite
+# myCrazeeBurger c'est mon projet pour Août 2023 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Brain.png" alt="Brain" width="25" height="25" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
 
-Currently, two official plugins are available:
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br/>
+
+## Objectifs de ce projet React 📚
+- utiliser useContext() plutôt que Redux Toolkit
+- faire des composants réellement neutres et réutilisables
+- travailler en déploiement progressif
+- mieux utiliser les styled-components
+- utiliser useRef()
+- apprendre à utiliser Firebase
+
+## Ma future version 😃
+- personnaliser le design et générer les images avec Dalle-E ou MidJourney
+- troquer les burgers contre des pizzas 
+
+## Infos sur le projet : 
+- Initialisé avec Vite.js et Yarn
+- Déployé sur ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) et accessible à cette adresse : [https://pointandgo-frontend.vercel.app/](https://my-crazee-burger.vercel.app)
+- D'après une idée originale et le cours "React en entreprise" de [Videv](https://videv.podia.com/), riche de 15 tickets pour développer ce projet.
+
