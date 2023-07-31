@@ -11,7 +11,7 @@ const Input = ({ text, name, placeholder, inputValue, setInputValue }) => {
 		<LabelStyled htmlFor={name}>
 			<h3>{name}</h3>
 			<InputWrapper>
-				<container>
+				<div>
 					<BsPersonCircle />
 					<input
 						required
@@ -22,7 +22,7 @@ const Input = ({ text, name, placeholder, inputValue, setInputValue }) => {
 						value={inputValue}
 						onChange={handleChange}
 					></input>
-				</container>
+				</div>
 			</InputWrapper>
 		</LabelStyled>
 	);
@@ -30,7 +30,8 @@ const Input = ({ text, name, placeholder, inputValue, setInputValue }) => {
 
 const LabelStyled = styled.label`
 	//color: ${theme.colors.white};
-		/* display: flex;
+	margin: 5px;
+	/* display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center; */
@@ -47,15 +48,13 @@ const LabelStyled = styled.label`
 `;
 
 const InputWrapper = styled.div`
-	/* background-color: ${theme.colors.white}; */
 	display: flex;
-	//border: 2px solid red;
 	width: 400px;
 	height: 53px;
 	color: ${theme.colors.greyBlue};
 	background-color: ${theme.colors.background_white};
 	border-radius: ${theme.borderRadius.round};
-	container {
+	div {
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;

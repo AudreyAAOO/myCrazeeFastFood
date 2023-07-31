@@ -25,8 +25,9 @@ const Form = () => {
 
 	return (
 		<LoginFormStyled onSubmit={handleSubmit}>
-			<h1>Bienvenue chez nous !</h1>
-
+			<div>
+				<h1>Bienvenue chez nous !</h1>
+			</div>
 			<div>
 				<Input
 					//mis ds le composant
@@ -55,8 +56,8 @@ const LoginFormStyled = styled.form`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: blue;
-	
+	//background-color: #68d3f4;
+
 	h1 {
 		border-bottom: 2px solid ${theme.colors.primary};
 		padding-bottom: 32px;
