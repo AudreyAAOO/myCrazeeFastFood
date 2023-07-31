@@ -1,9 +1,22 @@
-
+import { useNavigate, useParams } from "react-router-dom";
 
 const OrderPage = () => {
-    return (
-        <div>OrderPage</div>
-    )
-}
+	const params = useParams();
+	console.log(params);
 
-export default OrderPage
+	const navigate = useNavigate();
+
+	const handleDisconnect = () => {
+		navigate("/");
+	};
+
+	return (
+		<div>
+			Bonjour {params.username}
+			{/* alert("Bonjour " + `${username}`); */}
+			<button onClick={handleDisconnect}>se déconnecter</button>
+		</div>
+	);
+};
+
+export default OrderPage;
