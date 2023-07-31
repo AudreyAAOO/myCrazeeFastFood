@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import styled from "styled-components"; // imsc snippet   /macro
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowRight, MdNfc } from "react-icons/md";
 
 // import des composants
-import Input from "../components/Input";
-import { theme } from "../theme";
+import Input from "../Input";
+import { theme } from "../../theme";
 
 const Form = () => {
 	//! state
@@ -13,23 +13,32 @@ const Form = () => {
 
 	//! comportements
 	const handleSubmit = (e) => {
-		//e.prevent.default();
+		e.prevent.default();
+		alert("Bonjour " + `${username}`);
 		setUsername("");
-		navigate(`/Orderpage/${username}`);
+		Navigate(`/Orderpage/${inputValue}`);
 	};
+
+	// const handleChange = (e) => {
+	// 	setUsername(e.target.value);
+	// };
 
 	return (
 		<LoginFormStyled onSubmit={handleSubmit}>
-			<h2>Bienvenue chez nous !</h2>
-			<br />
-			{/* <h2>Connectez-vous</h2> */}
+			<h1>Bienvenue chez nous !</h1>
+
 			<div>
 				<Input
+					//mis ds le composant
 					text={true}
 					name={"Connectez-vous"}
-					placeholder={"entrez votre prénom"}
-					state={username}
-					setState={setUsername}
+					value={username}
+					//onChange={handleChange}
+					//type="text"
+					placeholder={"Entrez votre prénom..."}
+					//required
+					inputValue={username}
+					setInputValue={setUsername}
 				/>
 			</div>
 			<button>
@@ -46,8 +55,9 @@ const LoginFormStyled = styled.form`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
-	h2 {
+	background-color: blue;
+	
+	h1 {
 		border-bottom: 2px solid ${theme.colors.primary};
 		padding-bottom: 32px;
 		font-family: "Amatic SC", cursive;
@@ -56,13 +66,10 @@ const LoginFormStyled = styled.form`
 	}
 
 	button {
+		border-radius: ${theme.borderRadius.round};
 		background-color: ${theme.colors.primary_burger};
 		width: 400px;
 		height: 53px;
-		/* display: flex;
-		align-items: center;
-		justify-content: center; */
-		padding: 5px;
 		font-size: ${theme.fonts.P0};
 		font-weight: ${theme.weights.bold};
 		color: ${theme.colors.white};

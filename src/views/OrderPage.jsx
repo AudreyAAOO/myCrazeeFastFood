@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const OrderPage = () => {
 	const params = useParams();
-	console.log(params);
+	console.log("params", params);
 
 	const navigate = useNavigate();
 
@@ -10,10 +10,12 @@ const OrderPage = () => {
 		navigate("/");
 	};
 
+	//nfn snippet
+
 	return (
 		<div>
-			Bonjour {params.username}
-			{/* alert("Bonjour " + `${username}`); */}
+			Bonjour {params.inputValue}
+			{/* alert("Bonjour " + `${inputValue}`); */}
 			<button onClick={handleDisconnect}>se déconnecter</button>
 		</div>
 	);
