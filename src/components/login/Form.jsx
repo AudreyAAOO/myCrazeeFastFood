@@ -9,21 +9,19 @@ import { theme } from "../../theme";
 
 const Form = () => {
 	//! state
-	const [username, setUsername] = useState("");
+	const [inputValue, setInputValue] = useState("");
 	const navigate = useNavigate();
+
 	//! comportements
 	const handleSubmit = (e) => {
 		//e.prevent.default();
-		alert("Bonjour " + `${username}`);
-		console.log(e);
-		console.log("username", username);
-		navigate(`/Orderpage/${username}`);
-		setUsername("");
+		alert("Bonjour " + `${inputValue}`);
+		navigate(`/Orderpage/${inputValue}`);
+		setInputValue("");
 	};
-
-	// const handleChange = (e) => {
-	// 	setUsername(e.target.value);
-	// };
+	const handleChange = (e) => {
+		setInputValue(e.target.value);
+	};
 
 	return (
 		<LoginFormStyled onSubmit={handleSubmit}>
@@ -32,20 +30,18 @@ const Form = () => {
 			</div>
 			<div>
 				<Input
-					//mis ds le composant
+					value={inputValue}
+					onChange={handleChange}
 					text={true}
 					name={"Connectez-vous"}
-					//value={username}
-					//onChange={handleChange}
-					//type="text"
 					placeholder={"Entrez votre prénom..."}
-					//required
-					inputValue={username}
-					setInputValue={setUsername}
+					required={true}
 				/>
 			</div>
-			<button>
-				Accéder à mon espace <MdKeyboardArrowRight />
+
+			<button className="button-with-icon">
+				Accéder à mon espace
+				<MdKeyboardArrowRight className="arrow-icon" />
 			</button>
 		</LoginFormStyled>
 	);
@@ -58,7 +54,6 @@ const LoginFormStyled = styled.form`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	//background-color: #68d3f4;
 
 	h1 {
 		border-bottom: 2px solid ${theme.colors.primary};
@@ -68,14 +63,23 @@ const LoginFormStyled = styled.form`
 		font-size: ${theme.fonts.P5};
 	}
 
-	button {
-		border-radius: ${theme.borderRadius.round};
-		background-color: ${theme.colors.primary_burger};
+	.button-with-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		width: 30vw;
 		height: 53px;
 		font-size: ${theme.fonts.P0};
 		font-weight: ${theme.weights.bold};
 		color: ${theme.colors.white};
+		border-radius: ${theme.borderRadius.round};
+		background-color: ${theme.colors.primary_burger};
+	}
+
+	.arrow-icon {
+		font-size: ${theme.fonts.P1};
+		display: flex;
+		margin-left: 10px;
 	}
 
 	button:hover {
@@ -83,14 +87,6 @@ const LoginFormStyled = styled.form`
 		color: ${theme.colors.primary_burger};
 		cursor: pointer;
 	}
-
-	/* button:active {
-		background-color: ${theme.colors.white};
-		font-size: ${theme.fonts.P0};
-		font-weight: ${theme.weights.bold};
-		color: ${theme.colors.primary_burger};
-		cursor: pointer; 
-	} */
 `;
 
 export default Form;

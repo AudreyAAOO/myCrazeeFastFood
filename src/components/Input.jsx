@@ -2,73 +2,71 @@ import { BsPersonCircle } from "react-icons/bs";
 import styled from "styled-components";
 import { theme } from "../theme";
 
-const Input = ({ text, name, placeholder, inputValue, setInputValue }) => {
-	const handleChange = (e) => {
-		setInputValue(e.target.value);
-		console.log(e.target.value);
-	};
-
+const Input = ({ value, onChange, text, name, placeholder, required }) => {
 	return (
 		<LabelStyled htmlFor={name}>
 			<h3>{name}</h3>
-			<InputWrapper>
-				<div>
-					<BsPersonCircle />
-					<input
-						required
-						autoComplete={text ? "on" : "off"}
-						id={name}
-						type={text && "text"}
-						placeholder={placeholder}
-						value={inputValue}
-						onChange={handleChange}
-					></input>
-				</div>
-			</InputWrapper>
+			<div className="input-with-icon">
+				<BsPersonCircle className="icon" />
+				<input
+					value={value}
+					onChange={onChange}
+					type={text && "text"}
+					id={name}
+					placeholder={placeholder}
+					required={required ? true : false}
+					autoComplete={text ? "on" : "off"}
+				></input>
+			</div>
 		</LabelStyled>
 	);
 };
 
 const LabelStyled = styled.label`
-	//color: ${theme.colors.white};
-	margin: 5px;
-	/* display: flex;
+	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center; */
+	width: 30vw;
+
 	h3 {
-		//border: 2px solid blue;
+		position: relative;
+		width: 100%;
 		font-family: "Amatic SC", cursive;
 		font-weight: ${theme.weights.bold};
 		font-size: ${theme.fonts.P4};
-		margin-bottom: 20px;
+		margin: 20px 0;
 		line-height: ${theme.fonts.P4};
 		display: flex;
 		justify-content: center;
 	}
-`;
 
-const InputWrapper = styled.div`
-	display: flex;
-	width: 30vw;
-	height: 53px;
-	color: ${theme.colors.greyBlue};
-	background-color: ${theme.colors.background_white};
-	border-radius: ${theme.borderRadius.round};
-	div {
-		display: flex;
-		justify-content: flex-start;
+	.input-with-icon {
+		display: inline-flex;
 		align-items: center;
-		gap: 20px;
-		padding-left: 20px;
-		background-color: #05556e;
-	}
+		height: 53px;
+		text-decoration: none;
+		padding: 0 20px;
+		margin-bottom: 20px;
+		color: ${theme.colors.greyBlue};
+		background-color: ${theme.colors.background_white};
+		border-radius: ${theme.borderRadius.round};
 
-	input {
-		width: 100%;
-		border: 0;
-		background: transparent;
-		background-color: #9fdcef;
+		.icon {
+			font-size: ${theme.fonts.P1};
+			margin-right: 15px;
+			color: ${theme.colors.greyBlue};
+		}
+
+		input {
+			font-size: ${theme.fonts.P1};
+			border: none;
+			width: 100%;
+			background: transparent;
+		}
+
+		::placeholder {
+			color: ${theme.colors.greyBlue};
+			font-size: ${theme.fonts.P1};
+		}
 	}
 `;
 

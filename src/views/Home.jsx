@@ -1,12 +1,7 @@
-// import { useState } from "react";
-// import burgerBackground from "../assets/img/burgerBackground.jpg";
 import styled from "styled-components"; // imsc snippet   /macro
 
-// import des composants
 import Form from "../components/login/Form";
 import Logo from "../components/reusable-ui/Logo";
-import { theme } from "../theme";
-import OrderPage from "./OrderPage";
 
 const Home = () => {
 	return (
@@ -27,7 +22,6 @@ const HomePageStyled = styled.div`
 
 	::before {
 		content: "";
-		/* background-color: pink; */
 		background: url("../../src/assets/img/burgerBackground.jpg")
 			rgba(0, 0, 0, 0.7);
 		background-size: cover;
