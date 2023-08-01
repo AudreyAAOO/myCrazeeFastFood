@@ -10,13 +10,15 @@ import { theme } from "../../theme";
 const Form = () => {
 	//! state
 	const [username, setUsername] = useState("");
-
+	const navigate = useNavigate();
 	//! comportements
 	const handleSubmit = (e) => {
-		e.prevent.default();
+		//e.prevent.default();
 		alert("Bonjour " + `${username}`);
+		console.log(e);
+		console.log("username", username);
+		navigate(`/Orderpage/${username}`);
 		setUsername("");
-		Navigate(`/Orderpage/${inputValue}`);
 	};
 
 	// const handleChange = (e) => {
@@ -33,7 +35,7 @@ const Form = () => {
 					//mis ds le composant
 					text={true}
 					name={"Connectez-vous"}
-					value={username}
+					//value={username}
 					//onChange={handleChange}
 					//type="text"
 					placeholder={"Entrez votre prénom..."}
@@ -69,7 +71,7 @@ const LoginFormStyled = styled.form`
 	button {
 		border-radius: ${theme.borderRadius.round};
 		background-color: ${theme.colors.primary_burger};
-		width: 400px;
+		width: 30vw;
 		height: 53px;
 		font-size: ${theme.fonts.P0};
 		font-weight: ${theme.weights.bold};

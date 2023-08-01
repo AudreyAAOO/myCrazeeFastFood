@@ -5,6 +5,7 @@ import { theme } from "../theme";
 const Input = ({ text, name, placeholder, inputValue, setInputValue }) => {
 	const handleChange = (e) => {
 		setInputValue(e.target.value);
+		console.log(e.target.value);
 	};
 
 	return (
@@ -49,7 +50,7 @@ const LabelStyled = styled.label`
 
 const InputWrapper = styled.div`
 	display: flex;
-	width: 400px;
+	width: 30vw;
 	height: 53px;
 	color: ${theme.colors.greyBlue};
 	background-color: ${theme.colors.background_white};
@@ -60,11 +61,14 @@ const InputWrapper = styled.div`
 		align-items: center;
 		gap: 20px;
 		padding-left: 20px;
+		background-color: #05556e;
 	}
 
 	input {
+		width: 100%;
 		border: 0;
 		background: transparent;
+		background-color: #9fdcef;
 	}
 `;
 
