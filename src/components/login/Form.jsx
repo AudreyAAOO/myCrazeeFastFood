@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import styled from "styled-components"; // imsc snippet   /macro
 import { MdKeyboardArrowRight, MdNfc } from "react-icons/md";
+import { BsPersonCircle } from "react-icons/bs";
 
 // import des composants
 import Input from "../Input";
@@ -37,6 +38,7 @@ const Form = () => {
 					required={true}
 					//name={"Connectez-vous"}
 					//text={true}
+					insertIcon={<BsPersonCircle className="icon" />}
 				/>
 			</div>
 

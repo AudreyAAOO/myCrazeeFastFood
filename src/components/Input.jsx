@@ -2,22 +2,22 @@ import { BsPersonCircle } from "react-icons/bs";
 import styled from "styled-components";
 import { theme } from "../theme";
 
-const Input = ({ value, onChange, ...restProps }) => {
+const Input = ({ value, onChange, insertIcon, ...
+othersProps }) => {
 	// text, name, placeholder, required
-	//! ...restProps = déstructuring de props
-
-	console.log("restProps", restProps);
+	//! ...othersProps/restProps/any/extra  = déstructuring de props
 
 	return (
 		//<LabelStyled htmlFor={name}>{
 
 		<div className="input-with-icon">
-			<BsPersonCircle className="icon" />
+      {insertIcon}
 			<input
 				value={value}
 				onChange={onChange}
 				type="text"
-				{...restProps}
+				{...
+othersProps}
 
 				//? value={value}
 				//? onChange={onChange}
