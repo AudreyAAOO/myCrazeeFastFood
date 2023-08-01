@@ -2,26 +2,24 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // import theme CSS / styled
-import { theme } from "../../theme";
+import { theme } from "../../../theme/index";
 import styled from "styled-components";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { BsPersonCircle } from "react-icons/bs";
 
 // import des composants
-import TextInput from "../reusable-ui/TextInput";
-
-
+import TextInput from "../../reusable-ui/TextInput";
 
 const Form = () => {
 	const navigate = useNavigate();
 	const [inputValue, setInputValue] = useState("");
 
 	const handleSubmit = (e) => {
-		//e.prevent.default();
-		alert("Bonjour " + `${inputValue}`);
+		//alert("Bonjour " + `${inputValue}`);
 		navigate(`/Orderpage/${inputValue}`);
 		setInputValue("");
 	};
+
 	const handleChange = (e) => {
 		setInputValue(e.target.value);
 	};

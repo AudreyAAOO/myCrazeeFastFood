@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import backgroundImg from "../../src/assets/img/burgerBackground.jpg";
+import backgroundImg from "../../../assets/img/burgerBackground.jpg";
 // imsc snippet
 
-import Form from "../components/login/Form";
-import Logo from "../components/reusable-ui/Logo";
+import Form from "./Form";
+import Logo from "../../reusable-ui/Logo";
 
 const Home = () => {
 	return (
