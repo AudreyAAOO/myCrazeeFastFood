@@ -27,15 +27,16 @@ const Form = () => {
 		<LoginFormStyled onSubmit={handleSubmit}>
 			<div>
 				<h1>Bienvenue chez nous !</h1>
+				<h2>Connectez-vous</h2>
 			</div>
 			<div>
 				<Input
 					value={inputValue}
 					onChange={handleChange}
-					text={true}
-					name={"Connectez-vous"}
 					placeholder={"Entrez votre prénom..."}
 					required={true}
+					//name={"Connectez-vous"}
+					//text={true}
 				/>
 			</div>
 
@@ -54,32 +55,71 @@ const LoginFormStyled = styled.form`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	width: 35vw;
+	padding: 1rem 1rem;
+	text-align: center;
 
 	h1 {
 		border-bottom: 2px solid ${theme.colors.primary};
-		padding-bottom: 32px;
+		padding-bottom: 20px;
 		font-family: "Amatic SC", cursive;
 		font-weight: ${theme.weights.bold};
 		font-size: ${theme.fonts.P5};
+	}
+
+	h2 {
+		font-family: "Amatic SC", cursive;
+		font-weight: ${theme.weights.bold};
+		font-size: ${theme.fonts.P4};
+		margin: 15px 0;
+	}
+
+	.input-with-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-around;
+		height: 53px;
+		width: 35vw;
+		margin-bottom: 20px;
+		color: ${theme.colors.greyBlue};
+		background-color: ${theme.colors.background_white};
+		border-radius: ${theme.borderRadius.round};
+
+		.icon {
+			font-size: ${theme.fonts.P1};
+			color: ${theme.colors.greyBlue};
+		}
+
+		input {
+			font-size: ${theme.fonts.P1};
+			border: none;
+			background: transparent;
+		}
+
+		::placeholder {
+			color: ${theme.colors.greyBlue};
+			font-size: ${theme.fonts.P1};
+		}
 	}
 
 	.button-with-icon {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		width: 30vw;
+		position: relative;
+		width: 100%;
 		height: 53px;
 		font-size: ${theme.fonts.P0};
 		font-weight: ${theme.weights.bold};
 		color: ${theme.colors.white};
 		border-radius: ${theme.borderRadius.round};
+		border: 2px solid ${theme.colors.primary_burger};
 		background-color: ${theme.colors.primary_burger};
 	}
 
 	.arrow-icon {
 		font-size: ${theme.fonts.P1};
-		display: flex;
-		margin-left: 10px;
+		margin-left: 13px;
 	}
 
 	button:hover {

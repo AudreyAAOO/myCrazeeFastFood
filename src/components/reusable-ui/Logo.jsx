@@ -13,7 +13,7 @@ const Logo = () => {
 };
 
 const LogoStyled = styled.div`
-	// transform: scale(0.5);
+	//transform: scale(0.5);
 	display: flex;
 	align-items: center;
 	justify-content: center;
