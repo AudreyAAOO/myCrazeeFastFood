@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+// import theme CSS / styled
+import { theme } from "../../theme";
 import styled from "styled-components";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { BsPersonCircle } from "react-icons/bs";
 
 // import des composants
-import Input from "../Input";
-import { theme } from "../../theme";
+import TextInput from "../reusable-ui/TextInput";
+
+
 
 const Form = () => {
 	const navigate = useNavigate();
@@ -29,7 +33,7 @@ const Form = () => {
 				<h2>Connectez-vous</h2>
 			</div>
 			<div>
-				<Input
+				<TextInput
 					value={inputValue}
 					onChange={handleChange}
 					placeholder={"Entrez votre prénom..."}

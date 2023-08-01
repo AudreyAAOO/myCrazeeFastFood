@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { theme } from "../theme";
+import { theme } from "../../theme";
 
-const Input = ({ value, onChange, Icon, ...othersProps }) => {
+const TextInput = ({ value, onChange, Icon, ...othersProps }) => {
 	// text, name, placeholder, required
 	//! ...othersProps/restProps/any/extra = déstructuring de props
 
@@ -23,7 +23,7 @@ const Input = ({ value, onChange, Icon, ...othersProps }) => {
 		 */
 	);
 };
-export default Input;
+export default TextInput;
 
 const InputStyled = styled.div`
 	display: inline-flex;
@@ -45,6 +45,7 @@ const InputStyled = styled.div`
 		font-size: ${theme.fonts.P1};
 		border: none;
 		background: transparent;
+		width: 85%;
 	}
 
 	::placeholder {
