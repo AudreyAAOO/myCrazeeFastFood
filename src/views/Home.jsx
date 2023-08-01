@@ -1,5 +1,6 @@
-import styled from "styled-components"; 
-// imsc snippet 
+import styled from "styled-components";
+import backgroundImg from "../../src/assets/img/burgerBackground.jpg";
+// imsc snippet
 
 import Form from "../components/login/Form";
 import Logo from "../components/reusable-ui/Logo";
@@ -23,8 +24,9 @@ const HomePageStyled = styled.div`
 
 	::before {
 		content: "";
-		background: url("../../src/assets/img/burgerBackground.jpg")
-			rgba(0, 0, 0, 0.7);
+		background: url(${backgroundImg}) rgba(0, 0, 0, 0.7);
+		/* background: url("../../src/assets/img/burgerBackground.jpg")
+			rgba(0, 0, 0, 0.7); */
 		background-size: cover;
 		background-position: center;
 		background-blend-mode: darken;

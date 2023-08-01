@@ -15,7 +15,7 @@ const OrderPage = () => {
 	return (
 		<div>
 			Bonjour {params.inputValue}
-			{/* alert("Bonjour " + `${inputValue}`); */}
+			
 			<button onClick={handleDisconnect}>se déconnecter</button>
 		</div>
 	);
