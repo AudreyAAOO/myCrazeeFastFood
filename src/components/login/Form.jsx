@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import styled from "styled-components"; // imsc snippet   /macro
-import { MdKeyboardArrowRight, MdNfc } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import { MdKeyboardArrowRight } from "react-icons/md";
 import { BsPersonCircle } from "react-icons/bs";
 
 // import des composants
@@ -9,11 +9,9 @@ import Input from "../Input";
 import { theme } from "../../theme";
 
 const Form = () => {
-	//! state
-	const [inputValue, setInputValue] = useState("");
 	const navigate = useNavigate();
+	const [inputValue, setInputValue] = useState("");
 
-	//! comportements
 	const handleSubmit = (e) => {
 		//e.prevent.default();
 		alert("Bonjour " + `${inputValue}`);
@@ -36,9 +34,9 @@ const Form = () => {
 					onChange={handleChange}
 					placeholder={"Entrez votre prénom..."}
 					required={true}
+					Icon={<BsPersonCircle className="icon" />}
 					//name={"Connectez-vous"}
 					//text={true}
-					insertIcon={<BsPersonCircle className="icon" />}
 				/>
 			</div>
 
@@ -74,34 +72,6 @@ const LoginFormStyled = styled.form`
 		font-weight: ${theme.weights.bold};
 		font-size: ${theme.fonts.P4};
 		margin: 15px 0;
-	}
-
-	.input-with-icon {
-		display: inline-flex;
-		align-items: center;
-		justify-content: space-around;
-		height: 53px;
-		width: 35vw;
-		margin-bottom: 20px;
-		color: ${theme.colors.greyBlue};
-		background-color: ${theme.colors.background_white};
-		border-radius: ${theme.borderRadius.round};
-
-		.icon {
-			font-size: ${theme.fonts.P1};
-			color: ${theme.colors.greyBlue};
-		}
-
-		input {
-			font-size: ${theme.fonts.P1};
-			border: none;
-			background: transparent;
-		}
-
-		::placeholder {
-			color: ${theme.colors.greyBlue};
-			font-size: ${theme.fonts.P1};
-		}
 	}
 
 	.button-with-icon {

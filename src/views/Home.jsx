@@ -1,4 +1,5 @@
-import styled from "styled-components"; // imsc snippet   /macro
+import styled from "styled-components"; 
+// imsc snippet 
 
 import Form from "../components/login/Form";
 import Logo from "../components/reusable-ui/Logo";
