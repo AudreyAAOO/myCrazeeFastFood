@@ -1,23 +1,20 @@
 import { useNavigate, useParams } from "react-router-dom";
+import Logo from "../../reusable-ui/Logo";
+import Navbar from "../../Navbar";
 
 const OrderPage = () => {
-	const params = useParams();
-	console.log("params", params);
+	// const params = useParams();
+	// console.log("params", params);
 
-	const navigate = useNavigate();
 
-	const handleDisconnect = () => {
-		navigate("/");
-	};
 
 	//nfn snippet
 
 	return (
 		<div>
-			Bonjour {params.inputValue}
-			
-			<button onClick={handleDisconnect}>se déconnecter</button>
-		</div>
+						<Navbar />
+			{/* Bonjour {params.inputValue} */}
+			</div>
 	);
 };
 

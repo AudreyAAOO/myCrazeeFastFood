@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import logoOrange from "../../assets/img/logoOrange.png";
 import { theme } from "../../theme";
+import logoOrange from "../../assets/img/logoOrange.png";
 
 const Logo = () => {
 	return (
