@@ -28,3 +28,24 @@
 - Déployé sur ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) et accessible à cette adresse : [https://pointandgo-frontend.vercel.app/](https://my-crazee-burger.vercel.app)
 - D'après une idée originale et le cours "React en entreprise" de [Videv](https://videv.podia.com/), riche de 15 tickets pour développer ce projet.
 
+## Lancer le projet
+
+1. Installer yarn :
+
+   ```CMD
+   $ npm i -g yarn@1.22.19
+   ```
+
+2. Installer les dépendances :
+
+   ```CMD
+   yarn
+   ```
+
+3. Lancer l'appli :
+
+   ```CMD
+   yarn run dev
+   ```
+
+   Le front s'ouvrira à l'adresse [http://localhost:5173](http://localhost:5175).
