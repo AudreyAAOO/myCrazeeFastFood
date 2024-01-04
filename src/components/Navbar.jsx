@@ -36,11 +36,15 @@ const NavbarStyled = styled.div`
 	border: 2px solid blue;
 	width: 100vw;
 	height: 100px;
+	
 	display: flex;
+	justify-content: center;
+	
+	/*
 	align-items: center;
-	justify-content: flex-start;
+	 */
 	color: ${theme.colors.primary};
-	background-color: gray;
+	background-color: #c7e2b6;
 
 	.logo {
 		position: relative;
@@ -53,7 +57,7 @@ const NavbarStyled = styled.div`
 	}
 
 	.right {
-		background-color: grey;
+		background-color: #472c2c;
 
 		border: 2px solid green;
 		//display: flex;
